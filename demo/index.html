@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<link href='http://fonts.googleapis.com/css?family=Quicksand:300,400,700' rel='stylesheet' type='text/css'>
+	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+	<link rel="icon" type="image/png" href="images/peach.png">
+	<title>jQuery Plugin || simpleFilter.js </title>
+</head>
+<body>
+		
+	<header>
+		<div class="innerWrapper">
+			<h1>simpleFilter.js</h1>
+			<h2>a jQuery plugin to fancify your images</h2>
+			<a href="#about" class="scroll">Scroll down for more</a>
+
+			<div class="git">
+				<a href="https://github.com/vivialice/jQuery-plugin-project"><i class="fa fa-github-alt"></i></a>
+			</div><!-- /.git -->
+			<div class="fork is-hidden">
+				<p class="github">Fork or follow on Github!</p>
+			</div><!-- /.fork -->
+		</div><!-- /.innerWrapper -->
+	</header>
+
+	<section id="about">
+		<div class="innerWrapper">
+			<h2>What is it?</h2>
+			<p>simpleFilter.js is an easy-to-use jQuery plugin with a library of photo filters for your website. Choose from eight filters and six modifiers to create subtle effects. See below for examples or go straight to the <a href="#howTo">instructions</a>.</p>
+		</div><!-- /.innerWrapper -->
+	</section><!-- /.about -->
+
+	<div class="gallery clearfix"></div><!-- /.gallery -->
+		<div class="galleryWrapper clearfix">
+		<h2>Here are some examples of the effects you can achieve with simpleFilter.js</h2>
+
+		<div class="row">
+			<div class="imgContainer">
+				<img src="images/test-image.jpg" alt="" class="test1">
+				<h3>fade</h3>
+				<p>Slight fade for a dreamy effect</p>
+			</div><!-- /.imgContainer -->
+			<div class="imgContainer">
+				<img src="images/test-image2.jpg" alt="" class="test2">
+				<h3>vintage</h3>
+				<p>Cool tones and high contrast</p>
+			</div><!-- /.imgContainer -->	
+			<div class="imgContainer">
+				<img src="images/test-image3.jpg" alt="" class="test3">
+				<h3>greyscale</h3>
+				<p>No colour, medium contrast</p>
+			</div><!-- /.imgContainer -->
+			<div class="imgContainer">
+				<img src="images/test-image4.jpg" alt="" class="test4">
+				<h3>luxen + lightleak</h3>
+				<p>Bright and energetic</p>
+			</div><!-- /.row -->
+
+
+			<div class="row">
+			</div><!-- /.imgContainer -->
+			<div class="imgContainer">
+				<img src="images/test-image5.jpg" alt="" class="test5">
+				<h3>subtle</h3>
+				<p>Light and airy</p>
+			</div><!-- /.imgContainer -->
+			<div class="imgContainer">
+				<img src="images/test-image6.jpg" alt="" class="test6">
+				<h3>olive</h3>
+				<p>Deeper contrast, warm tones</p>
+			</div><!-- /.imgContainer -->
+			<div class="imgContainer">
+				<img src="images/test-image7.jpg" alt="" class="test7">
+				<h3>beach</h3>
+				<p>Cool tones and low blacks</p>
+			</div><!-- /.imgContainer -->
+			<div class="imgContainer">
+				<img src="images/test-image8.jpg" alt="" class="test8">
+				<h3>oldtimey + shadow</h3>
+				<p>Moody and lovely</p>
+			</div><!-- /.imgContainer -->
+			</div><!-- /.row -->
+
+		</div><!-- /.galleryWrapper -->
+	</div><!-- /.gallery -->
+
+	<section class="bonusEffects clearfix">
+		<div class="galleryWrapper">
+			<h2>Other options</h2>
+			<div class="row">
+				<div class="imgContainer">
+					<img src="images/test-image.jpg" alt="" class="test9">
+					<h3>lightleak01</h3>
+				</div><!-- /.imgContainer -->
+				<div class="imgContainer">
+					<img src="images/test-image2.jpg" alt="" class="test10">
+					<h3>lightleak02</h3>
+				</div><!-- /.imgContainer -->	
+				<div class="imgContainer">
+					<img src="images/test-image3.jpg" alt="" class="test11">
+					<h3>vignette shadow</h3>
+				</div><!-- /.imgContainer -->
+				<div class="imgContainer">
+					<img src="images/test-image4.jpg" alt="" class="test12">
+					<h3>lightleak03</h3>
+				</div><!-- /.row -->
+
+		</div><!-- /.innerWrapper -->
+	</section><!-- /.bonusEffects -->
+
+	<section id="howTo" class="clearfix">
+		<div class="innerWrapper">
+			<h2>How to use it</h2>
+			<p>Start by downloading the simpleFilter.js file and link it in your HTML document. Make sure you have the jQuery CDN linked as well!</p>
+				<div class="sampleCode">
+					<code>&lt;script src=&quot;jquery.simpleFilter.js&quot;&gt;&lt;/script&gt;</code>
+				</div><!-- /.sampleCode -->
+
+			<p>If you'd only like to target some of your images, add classes to the images you'd like to target. Please note that images can only be targeted locally. Perhaps like this:</p>
+				<div class="sampleCode">
+					<code>&lt;img src=&quot;myimage.jpg&quot; class=&quot;filter1&quot;&gt;</code>
+				</div><!-- /.sampleCode -->
+
+			<p>Target your image with jQuery and add your chosen filter and/or lightleak/shadow option to your document ready selection. Because the plugin needs time to edit your images, you need to start on window load. It should look like the example below. Alternatively, if you don't want to wait for a window load, look into using <a href="https://github.com/desandro/imagesloaded">images loaded</a>. See <a href="#options">below</a> for a full list of image options.</p>
+				<div class="sampleCode">
+					<pre>$(window).load(function(){
+$('img.filter1').simpleFilter({
+	filter : 'fade',
+	lightleak : 'lightleak01',
+	shadow : 'drama'
+	});
+});</pre>
+				</div><!-- /.sampleCode -->	
+
+			<p class="tada">Ta-da! Your images should be fresh and fancy now. Colours manipulate differently on different images, so play around with different options to find a filter that suits the images best. Shadows and light leaks should be used sparingly.</p>
+			<p class="tada">Note: if you are testing this from your computer, this won't work. You will need to run testing on a local server :)</p>	
+		</div><!-- /.innerWrapper -->
+	</section><!-- /.howTo -->
+	
+	<section id="options">
+		<div class="innerWrapper">
+			<h2>Full list of image options</h2>
+			<p>Filters</p>
+			<ul>
+				<li>fade</li>
+				<li>|</li>
+				<li>vintage</li>
+				<li>|</li>
+				<li>greyscale</li>
+				<li>|</li>
+				<li>luxen</li>
+				<li>|</li>
+				<li>subtle</li>
+				<li>|</li>
+				<li>olive</li>
+				<li>|</li>
+				<li>beach</li>
+				<li>|</li>
+				<li>oldtimey</li>
+			</ul>
+			<p>Light Leaks</p>
+			<ul>
+				<li>lightleak01</li>
+				<li>|</li>
+				<li>lightleak02</li>
+				<li>|</li>
+				<li>lightleak03</li>
+			</ul>
+			<p>Shadows</p>
+			<ul>
+				<li>vignette</li>
+				<li>|</li>
+				<li>drama</li>
+			</ul>
+		</div><!-- /.innerWrapper -->
+	</section>
+
+	<footer>
+		<div class="innerWrapper">
+			<p>&copy; <a href="http://www.vivienilett.com">Vivien Ilett 2015</a></p>
+		</div><!-- /.innerWrapper -->
+	</footer>
+
+
+
+
+
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+	<script src="jquery.simpleFilter.js"></script>
+	<script src="filter-test.js"></script>
+
+	<script>
+
+	$('.fa').on('mouseover', function(){
+		$('.fork').fadeIn('700').removeClass('is-hidden');
+		$(this).on('mouseleave', function(){
+			$('.fork').fadeOut('700').addClass('is-hidden');
+		});
+	});
+
+	</script>
+
+	<script>
+		$(function() {
+		  $('a[href*=#]:not([href=#])').click(function() {
+		    if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
+		      var target = $(this.hash);
+		      target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
+		      if (target.length) {
+		        $('html,body').animate({
+		          scrollTop: target.offset().top
+		        }, 1000);
+		        return false;
+		      }
+		    }
+		  });
+		});
+	</script>
+	
+</body>
+</html>
