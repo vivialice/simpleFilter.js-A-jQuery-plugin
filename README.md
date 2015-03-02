@@ -6,7 +6,7 @@ simpleFilter.js is an easy-to-use jQuery plugin with a library of photo filters 
 
 Start by downloading the simpleFilter.js file and link it in your HTML document. Make sure you have the jQuery CDN linked as well!
 
-&lt;script src=&quot;jquery.simpleFilter.js&quot;&gt;&lt;/script&gt;
+<code>&lt;script src=&quot;jquery.simpleFilter.js&quot;&gt;&lt;/script&gt;</code>
 
 If you'd only like to target some of your images, add classes to the images you'd like to target. Perhaps like this:
 
