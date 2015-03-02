@@ -10,7 +10,7 @@ Start by downloading the simpleFilter.js file and link it in your HTML document.
 
 If you'd only like to target some of your images, add classes to the images you'd like to target. Perhaps like this:
 
-&lt;img src=&quot;myimage.jpg&quot; class=&quot;filter1&quot;&gt;
+<code>&lt;img src=&quot;myimage.jpg&quot; class=&quot;filter1&quot;&gt;</code>
 
 Target your image with jQuery and add your chosen filter and/or lightleak/shadow option to your document ready selection. Because the plugin needs time to edit your images, you need to start on window load. It should look like the example below. Alternatively, if you don't want to wait for a window load, look into using [images loaded]:https://github.com/desandro/imagesloaded. See below for a full list of image options.
 
