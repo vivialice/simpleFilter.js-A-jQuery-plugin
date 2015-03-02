@@ -2,6 +2,8 @@
 
 simpleFilter.js is an easy-to-use jQuery plugin with a library of photo filters for your website. Choose from eight filters and six modifiers to create subtle effects.
 
+View documentation here:http://www.vivienilett.com/simplefilter
+
 #How to use it
 
 Start by downloading the simpleFilter.js file and link it in your HTML document. Make sure you have the jQuery CDN linked as well!
