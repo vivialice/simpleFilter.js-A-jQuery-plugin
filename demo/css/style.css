@@ -83,7 +83,8 @@ button, input, select, textarea {
 button, input {
   line-height: normal; }
 
-button, html input[type=button], input[type=reset], input[type=submit] {
+button, html input[type=button],
+input[type=reset], input[type=submit] {
   -webkit-appearance: button;
   cursor: pointer; }
 
@@ -157,64 +158,73 @@ img {
 header {
   background: linear-gradient(135deg, #ffa07a 0%, lightpink 100%);
   /* W3C */
-  padding: 22% 0;
   height: 100vh;
-  width: 100vw;
+  width: 100%;
+  padding: 5% 0;
   margin-bottom: 0;
   text-align: center; }
-  header a.scroll {
-    text-decoration: none;
-    color: white;
-    border: 2px solid white;
-    font-size: 0.8rem;
-    padding: 1.5%;
-    margin-top: 5%; }
-  header h1 {
-    font-family: 'Quicksand', sans-serif;
-    font-weight: 700;
-    font-size: 2.7rem;
-    letter-spacing: 0.2rem;
-    color: white;
-    margin: 0; }
-  header h2 {
-    font-weight: 400;
-    font-size: 1.1rem;
-    color: white;
-    margin-bottom: 5%; }
-  header .git {
+  header .titleBox {
     position: relative;
-    display: block; }
-    header .git .fa {
-      transition: all 0.5s;
-      font-size: 2.5rem;
+    text-align: center;
+    top: 50%;
+    transform: translateY(50%); }
+    header .titleBox a.scroll {
+      text-decoration: none;
       color: white;
-      padding-top: 5%; }
-  header .fork p.github {
-    margin: 0;
-    font-size: 0.6rem;
-    display: inline-block;
-    background: white;
-    color: dimgrey;
-    border-radius: 5px;
-    margin: 2%;
-    padding: 1.2%;
-    position: relative; }
-  header .fork p.github:after {
-    content: '';
-    position: absolute;
-    width: 0;
-    height: 0;
-    bottom: 35px;
-    right: 45%;
-    border-left: 8px solid transparent;
-    border-right: 8px solid transparent;
-    border-bottom: 10px solid white; }
+      border: 2px solid white;
+      font-size: 0.8rem;
+      padding: 1.5%;
+      margin-top: 5%; }
+    header .titleBox h1 {
+      font-family: 'Quicksand', sans-serif;
+      font-weight: 700;
+      font-size: 2.7rem;
+      letter-spacing: 0.2rem;
+      color: white;
+      margin: 0; }
+    header .titleBox h2 {
+      font-weight: 400;
+      font-size: 1.1rem;
+      color: white;
+      margin-bottom: 5%; }
+    header .titleBox .git {
+      position: relative;
+      display: block; }
+      header .titleBox .git .fa {
+        transition: all 0.5s;
+        font-size: 2.5rem;
+        color: white;
+        padding-top: 5%; }
+    header .titleBox .fork {
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%); }
+      header .titleBox .fork p.github {
+        margin: 0;
+        font-size: 0.6rem;
+        display: inline-block;
+        background: white;
+        color: dimgrey;
+        border-radius: 5px;
+        margin: 6%;
+        padding: 1.2%;
+        position: relative; }
+      header .titleBox .fork p.github:after {
+        content: '';
+        position: absolute;
+        width: 0;
+        height: 0;
+        bottom: 32px;
+        right: 44%;
+        border-left: 8px solid transparent;
+        border-right: 8px solid transparent;
+        border-bottom: 10px solid white; }
 
 #about {
   background: mintcream;
   padding: 5%;
   margin: 0;
-  width: 100vw;
+  width: 100%;
   text-align: center; }
   #about a {
     text-decoration: none;
@@ -236,18 +246,14 @@ header {
     padding: 5%;
     line-height: 1.5rem; }
 
-.row {
-  width: 100%;
-  clear: both;
-  margin: 0 auto;
-  padding-bottom: 3%; }
-
 .imgContainer {
-  width: 23%;
+  width: 25%;
   display: block;
   text-align: center;
-  float: left;
-  margin: 1%; }
+  float: left; }
+  .imgContainer img {
+    width: 100%;
+    height: auto; }
   .imgContainer p {
     font-size: 0.6rem;
     margin: 0;
@@ -263,7 +269,7 @@ header {
   clear: both;
   margin: 5% 0;
   border-top: 2px solid mintcream;
-  width: 100vw; }
+  width: 100%; }
   .bonusEffects h2 {
     margin: 0; }
 
@@ -325,3 +331,39 @@ footer {
   footer a {
     text-decoration: none;
     color: black; }
+
+@media (max-width: 1000px) {
+  .imgContainer {
+    width: 33.33%;
+    min-height: 255px; } }
+@media (max-width: 585px) {
+  header .titleBox {
+    padding-top: 10%; }
+    header .titleBox h1 {
+      font-size: 2.5rem; }
+
+  .imgContainer {
+    width: 50%; } }
+@media (max-width: 450px) {
+  h2, .galleryWrapper h2 {
+    font-size: 1rem; }
+
+  header .titleBox {
+    padding-top: 10%; }
+    header .titleBox h1 {
+      font-size: 1.1rem; }
+    header .titleBox h2 {
+      margin-bottom: 12%; }
+
+  .imgContainer {
+    width: 100%; }
+
+  #about {
+    padding: 5% 1%; }
+    #about p {
+      font-size: 0.9rem; }
+
+  #howTo code, #howTo pre {
+    font-size: 12px; } }
+
+/*# sourceMappingURL=style.css.map */

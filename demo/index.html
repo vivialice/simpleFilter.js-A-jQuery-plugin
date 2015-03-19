@@ -6,22 +6,25 @@
 	<link rel="stylesheet" href="css/style.css">
 	<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
 	<link rel="icon" type="image/png" href="images/peach.png">
-	<title>jQuery Plugin || simpleFilter.js </title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>simpleFilter.js | A jQuery Plugin</title>
 </head>
 <body>
 		
 	<header>
 		<div class="innerWrapper">
-			<h1>simpleFilter.js</h1>
-			<h2>a jQuery plugin to fancify your images</h2>
-			<a href="#about" class="scroll">Scroll down for more</a>
+			<div class="titleBox">
+				<h1>simpleFilter.js</h1>
+				<h2>a jQuery plugin to fancify your images</h2>
+				<a href="#about" class="scroll">Scroll down for more</a>
 
-			<div class="git">
-				<a href="https://github.com/vivialice/simpleFilter.js-A-jQuery-plugin"><i class="fa fa-github-alt"></i></a>
-			</div><!-- /.git -->
-			<div class="fork is-hidden">
-				<p class="github">Fork or follow on Github!</p>
-			</div><!-- /.fork -->
+				<div class="git">
+					<a href="https://github.com/vivialice/simpleFilter.js-A-jQuery-plugin"><i class="fa fa-github-alt"></i></a>
+				</div><!-- /.git -->
+				<div class="fork is-hidden">
+					<p class="github">Fork or follow on Github!</p>
+				</div><!-- /.fork -->
+			</div><!-- /.titleBox -->
 		</div><!-- /.innerWrapper -->
 	</header>
 
@@ -36,7 +39,6 @@
 		<div class="galleryWrapper clearfix">
 		<h2>Here are some examples of the effects you can achieve with simpleFilter.js</h2>
 
-		<div class="row">
 			<div class="imgContainer">
 				<img src="images/test-image.jpg" alt="" class="test1">
 				<h3>fade</h3>
@@ -56,10 +58,7 @@
 				<img src="images/test-image4.jpg" alt="" class="test4">
 				<h3>luxen + lightleak</h3>
 				<p>Bright and energetic</p>
-			</div><!-- /.row -->
 
-
-			<div class="row">
 			</div><!-- /.imgContainer -->
 			<div class="imgContainer">
 				<img src="images/test-image5.jpg" alt="" class="test5">
@@ -81,7 +80,6 @@
 				<h3>oldtimey + shadow</h3>
 				<p>Moody and lovely</p>
 			</div><!-- /.imgContainer -->
-			</div><!-- /.row -->
 
 		</div><!-- /.galleryWrapper -->
 	</div><!-- /.gallery -->
@@ -195,9 +193,9 @@ $('img.filter1').simpleFilter({
 	<script>
 
 	$('.fa').on('mouseover', function(){
-		$('.fork').fadeIn('700').removeClass('is-hidden');
+		$('.fork').removeClass('is-hidden');
 		$(this).on('mouseleave', function(){
-			$('.fork').fadeOut('700').addClass('is-hidden');
+			$('.fork').addClass('is-hidden');
 		});
 	});
 
